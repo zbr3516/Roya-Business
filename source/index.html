@@ -1,4 +1,3 @@
-
 <!-- 
 THEME: Small Apps | Bootstrap App Landing Template
 VERSION: 1.0.0
@@ -17,228 +16,260 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<style>
-	.loader-center{
-    background-color: white; 
-    position: absolute; 
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
+	<style>
+		.loader-center {
+			background-color: white;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+		}
 
-.loader-list{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -90px 0 0 -80px; 
-}
+		.loader-list {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -90px 0 0 -80px;
+		}
 
 
-.loader{
-    position: absolute;
-    top: 80px;
-    left: 65px;
-    color: red;
-    border-radius: 50%;
-    transition: 1s all;
-}
+		.loader {
+			position: absolute;
+			top: 80px;
+			left: 65px;
+			color: red;
+			border-radius: 50%;
+			transition: 1s all;
+		}
 
-.loader-top{
-    position: absolute;
-    border: 5px solid transparent;
-    border-top-color: rgb(0,167,89);
-    border-radius: 50%;
-    -webkit-animation: loading linear infinite;
-    -moz-animation: loading linear infinite;
-    -o-animation: loading linear infinite;
-    animation: loading linear infinite; 
-}
+		.loader-top {
+			position: absolute;
+			border: 5px solid transparent;
+			border-top-color: rgb(0, 167, 89);
+			border-radius: 50%;
+			-webkit-animation: loading linear infinite;
+			-moz-animation: loading linear infinite;
+			-o-animation: loading linear infinite;
+			animation: loading linear infinite;
+		}
 
-.loader-bottom{
-    position: absolute;
-    border: 5px solid transparent;
-    border-bottom-color: rgb(253,202,1);
-    border-radius: 50%;
-    -webkit-animation: loading linear infinite;
-    -moz-animation: loading linear infinite;
-    -o-animation: loading linear infinite;
-    animation: loading linear infinite; 
-}
+		.loader-bottom {
+			position: absolute;
+			border: 5px solid transparent;
+			border-bottom-color: rgb(253, 202, 1);
+			border-radius: 50%;
+			-webkit-animation: loading linear infinite;
+			-moz-animation: loading linear infinite;
+			-o-animation: loading linear infinite;
+			animation: loading linear infinite;
+		}
 
-.loader-top.one{
-    top: 24px;
-    left: 15px;
-    width: 120px;
-    height: 120px;
-    animation-duration: 1s;
-}
-.loader-top.two{
-    top: 37px;
-    left: 30px;
-    width: 90px;
-    height: 90px;
-    animation-duration: 1.2s;
-}
-.loader-top.three{
-    top: 50px;
-    left: 40px;
-    width: 70px;
-    height: 70px;
-    animation-duration: 1.4s;
-}
-.loader-top.four{
-    top: 64px;
-    left: 50px;
-    width: 50px;
-    height: 50px;
-    animation-duration: 1.6s;
-}
+		.loader-top.one {
+			top: 24px;
+			left: 15px;
+			width: 120px;
+			height: 120px;
+			animation-duration: 1s;
+		}
 
-.loader-bottom.one{
-    top: 23px;
-    left: 15px;
-    width: 120px;
-    height: 120px;
-    animation-duration: 1s;
-}
-.loader-bottom.two{
-    top: 42px;
-    left: 30px;
-    width: 90px;
-    height: 90px;
-    animation-duration: 1.2s;
-}
-.loader-bottom.three{
-    top: 51px;
-    left: 40px;
-    width: 70px;
-    height: 70px;
-    animation-duration: 1.4s;
-}
-.loader-bottom.four{
-    top: 59px;
-    left: 50px;
-    width: 50px;
-    height: 50px;
-    animation-duration: 1.6s;
-}
+		.loader-top.two {
+			top: 37px;
+			left: 30px;
+			width: 90px;
+			height: 90px;
+			animation-duration: 1.2s;
+		}
 
-@-webkit-keyframes loading {
-    from{
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-    to{
-        -webkit-transform: rotateZ(0);
-        -moz-transform: rotateZ(0);
-        -ms-transform: rotateZ(0);
-        transform: rotateZ(0);
-    }
-}
+		.loader-top.three {
+			top: 50px;
+			left: 40px;
+			width: 70px;
+			height: 70px;
+			animation-duration: 1.4s;
+		}
 
-@-moz-keyframes loading {
-    from{
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-    to{
-        -webkit-transform: rotateZ(0);
-        -moz-transform: rotateZ(0);
-        -ms-transform: rotateZ(0);
-        transform: rotateZ(0);
-    }
-}
+		.loader-top.four {
+			top: 64px;
+			left: 50px;
+			width: 50px;
+			height: 50px;
+			animation-duration: 1.6s;
+		}
 
-@-ms-keyframes loading {
-    from{
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-    to{
-        -webkit-transform: rotateZ(0);
-        -moz-transform: rotateZ(0);
-        -ms-transform: rotateZ(0);
-        transform: rotateZ(0);
-    }
-}
+		.loader-bottom.one {
+			top: 23px;
+			left: 15px;
+			width: 120px;
+			height: 120px;
+			animation-duration: 1s;
+		}
 
-@-ms-keyframes loading {
-    from{
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-    to{
-        -webkit-transform: rotateZ(0);
-        -moz-transform: rotateZ(0);
-        -ms-transform: rotateZ(0);
-        transform: rotateZ(0);
-    }
-}
+		.loader-bottom.two {
+			top: 42px;
+			left: 30px;
+			width: 90px;
+			height: 90px;
+			animation-duration: 1.2s;
+		}
 
-@keyframes loading {
-    from{
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-    to{
-        -webkit-transform: rotateZ(0);
-        -moz-transform: rotateZ(0);
-        -ms-transform: rotateZ(0);
-        transform: rotateZ(0);
-    }
-}
-</style>
-  <!-- Basic Page Needs
+		.loader-bottom.three {
+			top: 51px;
+			left: 40px;
+			width: 70px;
+			height: 70px;
+			animation-duration: 1.4s;
+		}
+
+		.loader-bottom.four {
+			top: 59px;
+			left: 50px;
+			width: 50px;
+			height: 50px;
+			animation-duration: 1.6s;
+		}
+
+		@-webkit-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-moz-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-ms-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-ms-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+	</style>
+	<style>
+		/* Initially hide the extra text */
+		.hidden-text {
+			max-height: 100px;
+			/* Set a height to control the visible portion of the text */
+			overflow: hidden;
+			transition: max-height 0.5s ease;
+		}
+
+		/* When showing the full text */
+		.show-text {
+			max-height: none;
+			/* Allows the full text to be visible */
+		}
+	</style>
+	<!-- Basic Page Needs
   ================================================== -->
-  <meta charset="utf-8">
-  <!-- <title>Small Apps | Bootstrap App Landing Template</title> -->
+	<meta charset="utf-8">
+	<!-- <title>Small Apps | Bootstrap App Landing Template</title> -->
 
-  <!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
   ================================================== -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Bootstrap App Landing Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="author" content="Themefisher">
-  <meta name="generator" content="Themefisher Small Apps Template v1.0">
-  
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Bootstrap App Landing Template">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta name="author" content="Themefisher">
+	<meta name="generator" content="Themefisher Small Apps Template v1.0">
 
-  <!-- Favicon -->
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> -->
-  
-  <!-- PLUGINS CSS STYLE -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="plugins/aos/aos.css">
 
-  <!-- CUSTOM CSS -->
-  <link href="/theme/css/style.css" rel="stylesheet">
-  <script type="text/javascript">
-	function googleTranslateElementInit() {
-		new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar'}, 'google_translate_element');
-	}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<!-- Favicon -->
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> -->
+
+	<!-- PLUGINS CSS STYLE -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="plugins/aos/aos.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<!-- CUSTOM CSS -->
+	<link href="/theme/css/style.css" rel="stylesheet">
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
+		}
+	</script>
+	<script type="text/javascript"
+		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </head>
 
-<body id="google_translate_element" class="body-wrapper" data-spy="scroll" data-target=".privacy-nav" onload="googleTranslateElementInit()">
+<body id="google_translate_element" class="body-wrapper" data-spy="scroll" data-target=".privacy-nav"
+	onload="googleTranslateElementInit()">
 
 	<div class="loader-center" id="loading">
 		<div class="loader-list">
@@ -246,7 +277,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 			<div class="two loader-top"></div>
 			<div class="three loader-top"></div>
 			<div class="four loader-top"></div>
-	<!--                 <div class="loader" id="loader">0%</div> -->
+			<!--                 <div class="loader" id="loader">0%</div> -->
 			<div class="one loader-bottom"></div>
 			<div class="two loader-bottom"></div>
 			<div class="three loader-bottom"></div>
@@ -254,54 +285,71 @@ FACEBOOK: https://www.facebook.com/themefisher
 		</div>
 	</div>
 
-<div id="actual-page" style="display:none;">
-<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/Frame 37.png" height="60px" width="60px" alt="logo"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span id="icons" class="ti-menu"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Personal
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
-						<!-- Dropdown list -->
-						<ul class="dropdown-menu">
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="addmoney.html">Add money</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="transfermoney.html">Tranfer to contacts</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Request Money</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Local Transfer</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="homepage-2.html">International transfer</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">stc bills & sawa</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Send Gift</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="homepage-2.html">Musaned</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Qitaf</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Business Payments</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="homepage-2.html">Qattah</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Money analytics</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Delete/Close Account</a></li>
+	<div id="actual-page" style="display:none;">
+		<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/Frame 37.png"
+						height="60px" width="60px" alt="logo"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span id="icons" class="ti-menu"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Personal
+								<span><i id="icons" class="ti-angle-down"></i></span>
+							</a>
+							<!-- Dropdown list -->
+							<ul class="dropdown-menu">
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="addmoney.html">Add
+										money</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="transfermoney.html">Tranfer to contacts</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item "
+										href="homepage-3.html">Request Money</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Local
+										Transfer</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="homepage-2.html">International transfer</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">stc
+										bills & sawa</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Send
+										Gift</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="homepage-2.html">Musaned</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item "
+										href="homepage-3.html">Qitaf</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Business
+										Payments</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="homepage-2.html">Qattah</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item "
+										href="homepage-3.html">Money analytics</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item "
+										href="homepage-3.html">Delete/Close Account</a></li>
 
-							<li class="dropdown dropdown-submenu dropright">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cards</a>
+								<li class="dropdown dropdown-submenu dropright">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0301" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Cards</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0301">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Mada</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Visa Card</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown @@pages">
-						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Business
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
-						<!-- Dropdown list -->
-						<ul class="dropdown-menu">
-							<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
+									<ul class="dropdown-menu" aria-labelledby="dropdown0301">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Mada</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Visa Card</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown @@pages">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Business
+								<span><i id="icons" class="ti-angle-down"></i></span>
+							</a>
+							<!-- Dropdown list -->
+							<ul class="dropdown-menu">
+								<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
 							<li><a class="dropdown-item @@career" href="career.html">Career</a></li>
 							<li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
 							<li><a class="dropdown-item @@blogSingle" href="blog-single.html">Blog Single</a></li>
@@ -312,35 +360,44 @@ FACEBOOK: https://www.facebook.com/themefisher
 							<li><a class="dropdown-item" href="404.html">404</a></li>
 							<li><a class="dropdown-item" href="comming-soon.html">Coming Soon</a></li> -->
 
-							<li class="dropdown dropdown-submenu dropright">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business
-									Services</a>
+								<li class="dropdown dropdown-submenu dropright">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Business
+										Services</a>
 
-								<ul style=" color: rgb(0,167,89);" class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Become a merchant</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Merchant App</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Merchant portal</a></li>
-								</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropright">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
+									<ul style=" color: rgb(0,167,89);" class="dropdown-menu"
+										aria-labelledby="dropdown0501">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Become a merchant</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Merchant App</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Merchant portal</a></li>
+									</ul>
+								</li>
+								<li class="dropdown dropdown-submenu dropright">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Overview</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Business services</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Marketplace</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown @@about">
-						<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="about.html" data-toggle="dropdown">About
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Business services</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Marketplace</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown @@about">
+							<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="about.html"
+								data-toggle="dropdown">About
+								<span><i id="icons" class="ti-angle-down"></i></span>
+							</a>
 
-						<ul class="dropdown-menu">
-							<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
+							<ul class="dropdown-menu">
+								<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
 							<li><a class="dropdown-item @@career" href="career.html">Career</a></li>
 							<li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
 							<li><a class="dropdown-item @@blogSingle" href="blog-single.html">Blog Single</a></li>
@@ -351,571 +408,709 @@ FACEBOOK: https://www.facebook.com/themefisher
 							<li><a class="dropdown-item" href="404.html">404</a></li>
 							<li><a class="dropdown-item" href="comming-soon.html">Coming Soon</a></li> -->
 
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
+								<li class="dropdown dropdown-submenu dropleft">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Overview</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">About</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Board Member</a></li>
-								</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Center</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">About</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Board Member</a></li>
+									</ul>
+								</li>
+								<li class="dropdown dropdown-submenu dropleft">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Media Center</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">News & Announcements</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown @@contact">
-						<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="contact.html" data-toggle="dropdown">Contact
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">News & Announcements</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown @@contact">
+							<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="contact.html"
+								data-toggle="dropdown">Contact
+								<span><i id="icons" class="ti-angle-down"></i></span>
+							</a>
 
-						<ul class="dropdown-menu">
+							<ul class="dropdown-menu">
 
-							<li class="dropdown dropdown-submenu">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Costumer support</a>
-								<!-- 
+								<li class="dropdown dropdown-submenu">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Costumer support</a>
+									<!-- 
 								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
 									<li><a class="dropdown-item" href="index.html">About</a></li>
 									<li><a class="dropdown-item" href="index.html">Board Member</a></li>
 								</ul> -->
-							</li>
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help Center</a>
+								</li>
+								<li class="dropdown dropdown-submenu dropleft">
+									<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+										id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Help Center</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Account Varification</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">qitaf points</a></li>
-									<!-- <li><a class="dropdown-item" href="index.html">News & Announcements</a></li> -->
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
+									<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">Account Varification</a></li>
+										<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+												href="index.html">qitaf points</a></li>
+										<!-- <li><a class="dropdown-item" href="index.html">News & Announcements</a></li> -->
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
-<!--====================================
+		<!--====================================
 =            Hero Section            =
 =====================================-->
-<section class="section gradient-banner">
-	<div class="shapes-container">
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
-		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
-	</div>
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
-				<h1 class="text-white font-weight-bold mb-4">Welcome to Roya Business – Secure, Fast, and Easy Payments.</h1>
-				<p class="text-white mb-5">Manage your finances with ease, track your transactions, transfer funds, and pay bills all in one place. Whether you're looking to top up your balance, add new beneficiaries, or make a quick bank transfer, our platform has you covered.</p>
-				<a  href="FAQ.html" class="btn btn-main-md">Vision 2030</a>
+		<section class="section gradient-banner">
+			<div class="shapes-container">
+				<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+				<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+				<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+				<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+				<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+				<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+				<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+				<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+				<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+				<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+				<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+				<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+				<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+				<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+				<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+				<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
 			</div>
-			<div class="col-md-6 text-center order-1 order-md-2">
-				<img class="img-fluid" src="images/mobile.png" alt="screenshot">
-			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Hero Section  ====-->
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+						<h1 class="text-white font-weight-bold mb-4">Welcome to Roya Business – Secure, Fast, and Easy
+							Payments.</h1>
+						<p class="text-white mb-5">Manage your finances with ease, track your transactions, transfer
+							funds, and pay bills all in one place. Whether you're looking to top up your balance, add
+							new beneficiaries, or make a quick bank transfer, our platform has you covered.</p>
+						<!-- <a href="" class="btn btn-main-md">Vision 2030</a> -->
+						<!-- Button trigger modal -->
+						<button  type="button" class="btn btn-primary" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">
+							Vision 2030
+						</button>
 
-<section class="section pt-0 position-relative pull-top">
-	<div class="container">
-		<div class="rounded shadow p-5 bg-white">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
-					<i id="icons" id="icons" class="ti-timer text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Real-Time Account Information</h3>
-					<p class="regular text-muted">Access your account balances and transaction history instantly.</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
-					<i id="icons" class="ti-lock text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Secure Bank Transfers</h3>
-					<p class="regular text-muted">Send money safely to any bank worldwide.</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
-					<i id="icons" class="ti-layout-media-overlay text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">SADAD Bill Payments</h3>
-					<p class="regular text-muted">The integration of SADAD payments allows users to settle
-						utility bills and government services directly through the app, eliminating the hassle
-						of multiple payment platforms.</p>
-					</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
-					<i id="icons" class="ti-layout-tab text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Manage Beneficiaries</h3>
-					<p class="regular text-muted">Save and organize your payees for faster transactions.</p>
-					</p>
+						<!-- Modal -->
+						<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+							tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 style=" color: rgb(0,167,89);" class="modal-title fs-2 text-center" id="staticBackdropLabel">VISION 2030
+										</h1>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<p>
+											Saudi Arabia's Vision 2030 outlines a strategic framework for economic
+											diversification and
+											sustainable development. By promoting digital transformation in the
+											financial sector, Roya
+											Business aligns perfectly with the goals set forth in this vision. The
+											application will foster
+											financial inclusion, promote entrepreneurship, and enhance the overall
+											quality of life for
+											citizens and residents.
+
+										</p><hr>
+										<p>
+											تحدد رؤية 2030 للمملكة العربية السعودية إطا ًرا استراتيجيًا لتنويع االقتصاد
+											والتنمية المستدامة. من خالل تعزيز التحول
+											تما مع األهداف المحددة في هذه الرؤية. سيعزز التطبيق الشمول المالي، ًم الرقمي
+											في القطاع المالي، تتماشى "رويا بيزنس" ا
+											.ويروج لريادة األعمال، ويحسن نوعية الحياة بشكل عام للمواطنين والمقيمين
+										</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-outline-danger"
+											data-bs-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-outline-success">Understood</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 text-center order-1 order-md-2">
+						<img style="
+						height: 420px;
+						width: 200px;
+						box-shadow: 20px 25px 25px rgb(28, 40, 51) ;
+						border-radius: 10px;
+					" class="img-fluid" src="images/iPhone_14.png" alt="screenshot">
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
+		</section>
+		<!--====  End of Hero Section  ====-->
 
-<!--==================================
+		<section class="section pt-0 position-relative pull-top">
+			<div class="container">
+				<div class="rounded shadow p-5 bg-white">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
+							<i id="icons" id="icons" class="ti-timer text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">Real-Time Transations</h3>
+							<p class="regular text-muted">The application ensures immediate processing of
+								transactions, which enhances user satisfaction by providing instant confirmation of
+								payments and transfers</p>
+						</div>
+						<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
+							<i id="icons" class="ti-lock text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">Secure and Compilation</h3>
+							<p class="regular text-muted">User security is a top priority for Roya Business. The application will
+								implement robust encryption methods and multi-factor authentication to
+								safeguard user data.
+								</p>
+						</div>
+						<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+							<i id="icons" class="ti-layout-media-overlay text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">SADAD Bill Payments</h3>
+							<p class="regular text-muted">The integration of SADAD payments allows users to settle
+								utility bills and government services directly through the app, eliminating the hassle
+								of multiple payment platforms.</p>
+							</p>
+						</div>
+						<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+							<i id="icons" class="ti-layout-tab text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">Manage Beneficiaries</h3>
+							<p class="regular text-muted">Save and organize your payees for faster transactions.</p>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--==================================
 =            Feature Grid            =
 ===================================-->
-<section class="feature section pt-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 ml-auto justify-content-center">
-				<!-- Feature Mockup -->
-				<div class="image-content" data-aos="fade-right">
-					<img class="img-fluid" src="images/feature/feature-new-01.jpg" alt="iphone">
-				</div>
-			</div>
-			<div class="col-lg-6 mr-auto align-self-center">
-				<div class="feature-content">
-					<!-- Feature Title -->
-					<h2 style=" color: rgb(0,167,89);"> Accounts Overview 
-						<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2> -->
-					<!-- Feature Description -->
-					<p class="desc">Your Accounts, Simplified.
-					</p>
-					<p>At [Website Name], managing your accounts is effortless. View all your bank accounts in one place, track your balances, and keep up with your spending.
-					</p>
-				</div>
-				<p>What You Can Do</p>
-					<ul>
-						<li>View Account Balances: See your account balances in real-time.</li>
-						<li>Transaction History: Track every transaction, filter by date, type, or amount, and get detailed information at a glance.</li>
-						<li>Secure Access: Your account information is always protected with industry-leading encryption.
-						</li>
-					</ul>
-				<!-- Testimonial Quote -->
-				<div class="testimonial">
-					<p>
-						"Your trust is our strength. Every problem’s solution, we are together!"
-					</p>
-					<p lang="ar" dir="rtl">
-						 " ثقتك هي قوتنا. كل حل للمشكلة، نحن معاً! "
-					</p>
-					
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , [Website Name] team</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+		<section class="feature section pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 ml-auto justify-content-center">
+						<!-- Feature Mockup -->
+						<div class="image-content" data-aos="fade-right">
+							<img class="img-fluid" src="images/Group 27.png" alt="iphone">
+						</div>
+					</div>
+					<div class="col-lg-6 mr-auto align-self-center">
+						<div class="feature-content">
+							<!-- Feature Title -->
+							<h2 style=" color: rgb(0,167,89);"> Accounts Overview
+								<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2> -->
+								<!-- Feature Description -->
+								<p class="desc">Your Accounts, Simplified.
+								</p>
+								<p>At [Website Name], managing your accounts is effortless. View all your bank accounts
+									in one place, track your balances, and keep up with your spending.
+								</p>
+						</div>
+						<p>What You Can Do</p>
+						<ul>
+							<li>View Account Balances: See your account balances in real-time.</li>
+							<li>Transaction History: Track every transaction, filter by date, type, or amount, and get
+								detailed information at a glance.</li>
+							<li>Secure Access: Your account information is always protected with industry-leading
+								encryption.
+							</li>
+						</ul>
+						<!-- Testimonial Quote -->
+						<div class="testimonial">
+							<p>
+								"Your trust is our strength. Every problem’s solution, we are together!"
+							</p>
+							<p lang="ar" dir="rtl">
+								" ثقتك هي قوتنا. كل حل للمشكلة، نحن معاً! "
+							</p>
 
-<section class="feature section pt-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 ml-auto align-self-center">
-				<div class="feature-content">
-					<!-- bank transfer Title -->
-					<h2 style=" color: rgb(0,167,89);"> Bank Transfers 
-						<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2> -->
-					<!-- Feature Description -->
-					<p>Send Money, Anytime, Anywhere.</p>
-					<p>Need to transfer money between accounts or send funds to a different bank? Our platform makes it easy. With a few clicks, you can securely transfer funds within minutes.</p>
-					<p>How It Works</p>
-					<ul>
-						<li>Choose Your Account: Select the account you want to send money from.</li>
-						<li>Enter Beneficiary Details: Add recipient details, including bank name, account number, and SWIFT/IBAN code.
-						</li>
-						<li>Confirm and Send: Double-check the details, confirm the transaction, and you’re done.
-						</li>
-					</ul>
-					<p>Why Use [Website Name] for Transfers?</p>
-					<ul>
-						<li>Fast and Reliable: Funds transferred in minutes, not days.</li>
-						<li>Global Reach: Send money to any bank, anywhere in the world.</li>
-						<li>Secure: All transfers are protected by two-factor authentication and SSL encryption.</li>
-					</ul>
-				</div>
-				<!-- Testimonial Quote -->
-				<div class="testimonial">
-					<p>
-						“We are always there for your business, because your problem is our problem!”
-					</p>
-					<p>" نحن دائماً هنا من أجل عملك، لأن مشكلتك هي مشكلتنا! "</p>
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , [Website Name] team</li>
-					</ul>
+							<ul class="list-inline meta">
+								<li class="list-inline-item">
+									<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="">
+								</li>
+								<li class="list-inline-item">Jonathon Andrew , [Website Name] team</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 mr-auto justify-content-center">
-				<!-- Feature mockup -->
-				<div class="image-content" data-aos="fade-left">
-					<img class="img-fluid" src="images/feature/feature-new-02.jpg" alt="ipad">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Feature Grid  ====-->
+		</section>
 
-<!--==============================
+		<section class="feature section pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 ml-auto align-self-center">
+						<div class="feature-content">
+							<!-- bank transfer Title -->
+							<h2 style=" color: rgb(0,167,89);"> Bank Transfers
+								<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2> -->
+								<!-- Feature Description -->
+								<p>Send Money, Anytime, Anywhere.</p>
+								<p>Need to transfer money between accounts or send funds to a different bank? Our
+									platform makes it easy. With a few clicks, you can securely transfer funds within
+									minutes.</p>
+								<p>How It Works</p>
+								<ul>
+									<li>Choose Your Account: Select the account you want to send money from.</li>
+									<li>Enter Beneficiary Details: Add recipient details, including bank name, account
+										number, and SWIFT/IBAN code.
+									</li>
+									<li>Confirm and Send: Double-check the details, confirm the transaction, and you’re
+										done.
+									</li>
+								</ul>
+								<p>Why Use [Website Name] for Transfers?</p>
+								<ul>
+									<li>Fast and Reliable: Funds transferred in minutes, not days.</li>
+									<li>Global Reach: Send money to any bank, anywhere in the world.</li>
+									<li>Secure: All transfers are protected by two-factor authentication and SSL
+										encryption.</li>
+								</ul>
+						</div>
+						<!-- Testimonial Quote -->
+						<div class="testimonial">
+							<p>
+								“We are always there for your business, because your problem is our problem!”
+							</p>
+							<p>" نحن دائماً هنا من أجل عملك، لأن مشكلتك هي مشكلتنا! "</p>
+							<ul class="list-inline meta">
+								<li class="list-inline-item">
+									<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="">
+								</li>
+								<li class="list-inline-item">Jonathon Andrew , [Website Name] team</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6 mr-auto justify-content-center">
+						<!-- Feature mockup -->
+						<div class="image-content" data-aos="fade-left">
+							<img class="img-fluid" src="images/card_swiping_machine.png" alt="ipad">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--====  End of Feature Grid  ====-->
+
+		<!--==============================
 =            Services            =
 ===============================-->
-<section class="service section bg-gray">
-	<div class="container-fluid p-0">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="section-title">
-					<h1 style=" color: rgb(0,167,89);">More Features</h1>
-					<p>
-						<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a> -->
-</p>
+		<section class="service section bg-gray">
+			<div class="container-fluid p-0">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h1 style=" color: rgb(0,167,89);">More Features</h1>
+							<p>
+								<!-- <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a> -->
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row no-gutters">
-			<div class="col-lg-6 align-self-center">
-				<!-- Feature Image -->
-				<div class="service-thumb left" data-aos="fade-right">
-					<img class="img-fluid" src="images/feature/iphone-ipad.jpg" alt="iphone-ipad">
-				</div>
-			</div>
-			<div class="col-lg-5 mr-auto align-self-center">
-				<div class="service-box">
-					<div class="row align-items-center">
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i id="icons" class="ti-bookmark"></i>
-								<!-- Heading -->
-								<h3 style=" color: rgb(0,167,89);">Personal Use</h3>
-								<!-- Description -->
-								<p>Quickly add and verify new beneficiaries for seamless transactions. Secure, organized, and ready for future payments.</p>
-							</div>
+				<div class="row no-gutters">
+					<div class="col-lg-6 align-self-center">
+						<!-- Feature Image -->
+						<div class="service-thumb left image-container" data-aos="fade-right">
+							<img class="img-fluid rounded" src="/source/images/merchant.png" alt="iphone-ipad">
 						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i id="icons" class="ti-pulse"></i>
-								<!-- Heading -->
-								<h3>Phone Number Payments</h3>
-								<!-- Description -->
-								<p>
-									Make secure, instant payments using just a phone number. Fast, convenient, and hassle-free transactions anytime, anywhere.</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i id="icons" class="ti-bar-chart"></i>
-								<!-- Heading -->
-								<h3>Balance Top-Up</h3>
-								<!-- Description -->
-								<p>Instantly add funds to your account using various payment methods. Stay ready for transactions and payments anytime.</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i id="icons" class="ti-panel"></i>
-								<!-- Heading -->
-								<h3>Billing and Payments</h3>
-								<!-- Description -->
-								<p>Pay your bills effortlessly and manage recurring payments. Track your payment history with one-click convenience and security.</p>
+					</div>
+					<div class="col-lg-5 mr-auto align-self-center">
+						<div class="service-box">
+							<div class="row align-items-center">
+								<div class="col-md-6 col-xs-12">
+									<!-- Service 01 -->
+									<div class="service-item">
+										<!-- Icon -->
+										<i id="icons" class="ti-bookmark"></i>
+										<!-- Heading -->
+										<h3 style=" color: rgb(0,167,89);">Personal Use</h3>
+										<!-- Description -->
+										<p id="text" class="hidden-text">The application enables easy peer-to-peer
+											transfers, bill payments, and
+											QR code payments for everyday transactions. Users can send money to friends
+											and
+											family with just a few taps on their smartphones, simplifying personal
+											financial
+											management</p>
+
+										<button type="button" class="btn btn-outline-success custom-outline-btn"
+											id="readMoreBtn" onclick="toggleText()">Read More</button>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<!-- Service 01 -->
+									<div class="service-item">
+										<!-- Icon -->
+										<i id="icons" class="ti-pulse"></i>
+										<!-- Heading -->
+										<h3 style=" color: rgb(0,167,89);">Card Payment</h3>
+										<!-- <h3 >Phone Number Payments</h3> -->
+										<!-- Description -->
+										<p id="text" class="hidden-text">
+											Roya Business card payment solutions ensure fast, secure transactions for
+											your business. Accept major credit and debit cards with ease, featuring
+											chip, swipe, and contactless options for a seamless customer experience.</p>
+										<button type="button" class="btn btn-outline-success custom-outline-btn"
+											id="readMoreBtn" onclick="toggleText()">Read More</button>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<!-- Service 01 -->
+									<div class="service-item">
+										<!-- Icon -->
+										<i id="icons" class="ti-bar-chart"></i>
+										<!-- Heading -->
+										<h3 style=" color: rgb(0,167,89);">Android POS Systems</h3>
+										<!-- Description -->
+										<p id="text" class="hidden-text">Roya Business will provide merchants with a
+											mobile
+											point-of-sale (POS) solution, enabling them to accept payments anywhere,
+											enhancing
+											flexibility and convenience in transactions.</p>
+										<button type="button" class="btn btn-outline-success custom-outline-btn"
+											id="readMoreBtn" onclick="toggleText()">Read More</button>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<!-- Service 01 -->
+									<div class="service-item">
+										<!-- Icon -->
+										<i id="icons" class="ti-panel"></i>
+										<!-- Heading -->
+										<h3 style=" color: rgb(0,167,89);">POS system</h3>
+										<!-- Description -->
+										<p id="text" class="hidden-text">Roya Business POS system streamlines
+											transactions, offering secure payments,
+											inventory management, and real-time sales tracking. Perfect for businesses
+											of any size, it supports card, cash, and digital payments seamlessly.</p>
+										<button type="button" class="btn btn-outline-success custom-outline-btn"
+											id="readMoreBtn" onclick="toggleText()">Read More</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Services  ====-->
+		</section>
+		<!--====  End of Services  ====-->
 
 
-<!--=================================
+		<!--=================================
 =            Video Promo            =
 ==================================-->
-<section class="video-promo section bg-1">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="content-block">
-					<!-- Heading -->
-					<h2 style=" color: rgb(0,167,89);">Watch Our Promo Video</h2>
-					<!-- Promotional Speech -->
-					<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et,
-						porttitor at sem. Vivamus </p>
-					<!-- Popup Video -->
-					<a data-fancybox href="https://youtu.be/X8FkegKcfjo?si=rn_JxJOpzIgyoYIM">
-						<i class="ti-control-play video"></i>
-					</a>
+		<section class="video-promo section bg-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="content-block">
+							<!-- Heading -->
+							<h2 style=" color: rgb(0,167,89);">Watch Our Promo Video</h2>
+							<!-- Promotional Speech -->
+							<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id
+								imperdiet et,
+								porttitor at sem. Vivamus </p>
+							<!-- Popup Video -->
+							<a data-fancybox href="https://youtu.be/X8FkegKcfjo?si=rn_JxJOpzIgyoYIM">
+								<i class="ti-control-play video"></i>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Video Promo  ====-->
+		</section>
+		<!--====  End of Video Promo  ====-->
 
-<!--=================================
+		<!--=================================
 =            Testimonial            =
 ==================================-->
-<section class="section testimonial" id="testimonial">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<!-- Testimonial Slider -->
-				<div class="testimonial-slider owl-carousel owl-theme">
-					<!-- Testimonial 01 -->
-					<div class="item">
-						<div class="block shadow">
-							<!-- Speech -->
-							<p>
-								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-								pretium ut lacinia in, elementum id enim.
-							</p>
-							<!-- Person Thumb -->
-							<div class="image">
-								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+		<section class="section testimonial" id="testimonial">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Testimonial Slider -->
+						<div class="testimonial-slider owl-carousel owl-theme">
+							<!-- Testimonial 01 -->
+							<div class="item">
+								<div class="block shadow">
+									<!-- Speech -->
+									<p>
+										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin
+										molestie malesuada.
+										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
+										dapibus. Lorem ipsum dolor
+										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
+										dapibus. Quisque velit nisi,
+										pretium ut lacinia in, elementum id enim.
+									</p>
+									<!-- Person Thumb -->
+									<div class="image">
+										<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+									</div>
+									<!-- Name and Company -->
+									<cite>Abraham Linkon , Themefisher.com</cite>
+								</div>
 							</div>
-							<!-- Name and Company -->
-							<cite>Abraham Linkon , Themefisher.com</cite>
-						</div>
-					</div>
-					<!-- Testimonial 01 -->
-					<div class="item">
-						<div class="block shadow">
-							<!-- Speech -->
-							<p>
-								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-								pretium ut lacinia in, elementum id enim.
-							</p>
-							<!-- Person Thumb -->
-							<div class="image">
-								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+							<!-- Testimonial 01 -->
+							<div class="item">
+								<div class="block shadow">
+									<!-- Speech -->
+									<p>
+										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin
+										molestie malesuada.
+										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
+										dapibus. Lorem ipsum dolor
+										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
+										dapibus. Quisque velit nisi,
+										pretium ut lacinia in, elementum id enim.
+									</p>
+									<!-- Person Thumb -->
+									<div class="image">
+										<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+									</div>
+									<!-- Name and Company -->
+									<cite>Abraham Linkon , Themefisher.com</cite>
+								</div>
 							</div>
-							<!-- Name and Company -->
-							<cite>Abraham Linkon , Themefisher.com</cite>
-						</div>
-					</div>
-					<!-- Testimonial 01 -->
-					<div class="item">
-						<div class="block shadow">
-							<!-- Speech -->
-							<p>
-								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-								pretium ut lacinia in, elementum id enim.
-							</p>
-							<!-- Person Thumb -->
-							<div class="image">
-								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+							<!-- Testimonial 01 -->
+							<div class="item">
+								<div class="block shadow">
+									<!-- Speech -->
+									<p>
+										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin
+										molestie malesuada.
+										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
+										dapibus. Lorem ipsum dolor
+										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
+										dapibus. Quisque velit nisi,
+										pretium ut lacinia in, elementum id enim.
+									</p>
+									<!-- Person Thumb -->
+									<div class="image">
+										<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+									</div>
+									<!-- Name and Company -->
+									<cite>Abraham Linkon , Themefisher.com</cite>
+								</div>
 							</div>
-							<!-- Name and Company -->
-							<cite>Abraham Linkon , Themefisher.com</cite>
-						</div>
-					</div>
-					<!-- Testimonial 01 -->
-					<div class="item">
-						<div class="block shadow">
-							<!-- Speech -->
-							<p>
-								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-								pretium ut lacinia in, elementum id enim.
-							</p>
-							<!-- Person Thumb -->
-							<div class="image">
-								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+							<!-- Testimonial 01 -->
+							<div class="item">
+								<div class="block shadow">
+									<!-- Speech -->
+									<p>
+										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin
+										molestie malesuada.
+										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
+										dapibus. Lorem ipsum dolor
+										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
+										dapibus. Quisque velit nisi,
+										pretium ut lacinia in, elementum id enim.
+									</p>
+									<!-- Person Thumb -->
+									<div class="image">
+										<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+									</div>
+									<!-- Name and Company -->
+									<cite>Abraham Linkon , websit name</cite>
+								</div>
 							</div>
-							<!-- Name and Company -->
-							<cite>Abraham Linkon , Themefisher.com</cite>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Testimonial  ====-->
+		</section>
+		<!--====  End of Testimonial  ====-->
 
-<section class="call-to-action-app section bg-blue" style="background: rgb(0,167,89);
+		<section class="call-to-action-app section bg-blue" style="background: rgb(0,167,89);
 background: linear-gradient(45deg, rgba(0,167,89,1) 025%, rgba(253,202,1,1) 90%);">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>It's time to change your mind</h2>
-				<p>Download over 2 million humans .Get <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a> free forever!
-					<br>We say you won’t look back.</p>
-				<ul class="list-inline">
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-apple"></i>
-							Iphone
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-android"></i>
-							Android
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-microsoft-alt"></i>
-							Windows
-						</a>
-					</li>
-				</ul>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>It's time to change your mind</h2>
+						<p>Download over 2 million humans .Get <a
+								href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small
+								Apps</a> free forever!
+							<br>We say you won’t look back.
+						</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<a href="" class="btn btn-rounded-icon">
+									<i class="ti-apple"></i>
+									Iphone
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="" class="btn btn-rounded-icon">
+									<i class="ti-android"></i>
+									Android
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="" class="btn btn-rounded-icon">
+									<i class="ti-microsoft-alt"></i>
+									Windows
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
+		</section>
 
-<!--============================
+		<!--============================
 =            Footer            =
 =============================-->
-<footer>
-  <div class="footer-main" style=" color: rgb(0,167,89);">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-12 m-md-auto align-self-center">
-          <div class="block">
-            <a href="index.html"><img class="rounded-circle" src="images/Frame 37.png" height="60px" width="60px" alt="footer-logo"></a>
-            <!-- Social Site Icons -->
-            <ul class="social-icon list-inline">
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com"><i id="icons" class="ti-facebook"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://twitter.com"><i id="icons" class="ti-twitter"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com"><i id="icons" class="ti-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6 style=" color: rgb(0,167,89);">Product</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="">Teams</a></li>
-              <li><a href="">Blogs</a></li>
-              <li><a href="">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6 style=" color: rgb(0,167,89);">Resources</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="">Singup</a></li>
-              <li><a href="">Login</a></li>
-              <li><a href="">Blog</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6 style=" color: rgb(0,167,89);">Company</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="">Career</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Investor</a></li>
-              <li><a href="">Terms</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6 style=" color: rgb(0,167,89);">Company</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Team</a></li>
-              <li><a href="">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center bg-dark py-4" >
-    <small class="text-secondary" style=" color: rgb(0,167,89);">Copyright &copy; 2020. Designed &amp; Developed by <a
-       >company name</a></small class="text-secondary">
-  </div>
-</footer>
+		<footer>
+			<div class="footer-main" style=" color: rgb(0,167,89);">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-12 m-md-auto align-self-center">
+							<div class="block">
+								<a href="index.html"><img class="rounded-circle" src="images/Frame 37.png" height="60px"
+										width="60px" alt="footer-logo"></a>
+								<!-- Social Site Icons -->
+								<ul class="social-icon list-inline">
+									<li class="list-inline-item">
+										<a href="https://www.facebook.com"><i id="icons" class="ti-facebook"></i></a>
+									</li>
+									<li class="list-inline-item">
+										<a href="https://twitter.com"><i id="icons" class="ti-twitter"></i></a>
+									</li>
+									<li class="list-inline-item">
+										<a href="https://www.instagram.com"><i id="icons" class="ti-instagram"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+							<div class="block-2">
+								<!-- heading -->
+								<h6 style=" color: rgb(0,167,89);">Product</h6>
+								<!-- links -->
+								<ul>
+									<li><a href="">Teams</a></li>
+									<li><a href="">Blogs</a></li>
+									<li><a href="">FAQs</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+							<div class="block-2">
+								<!-- heading -->
+								<h6 style=" color: rgb(0,167,89);">Resources</h6>
+								<!-- links -->
+								<ul>
+									<li><a href="">Singup</a></li>
+									<li><a href="">Login</a></li>
+									<li><a href="">Blog</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+							<div class="block-2">
+								<!-- heading -->
+								<h6 style=" color: rgb(0,167,89);">Company</h6>
+								<!-- links -->
+								<ul>
+									<li><a href="">Career</a></li>
+									<li><a href="">Contact</a></li>
+									<li><a href="">Investor</a></li>
+									<li><a href="">Terms</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+							<div class="block-2">
+								<!-- heading -->
+								<h6 style=" color: rgb(0,167,89);">Company</h6>
+								<!-- links -->
+								<ul>
+									<li><a href="">About</a></li>
+									<li><a href="">Contact</a></li>
+									<li><a href="">Team</a></li>
+									<li><a href="">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center bg-dark py-4">
+				<small class="text-secondary" style=" color: rgb(0,167,89);">Copyright &copy; 2020. Designed &amp;
+					Developed by <a>company name</a></small class="text-secondary">
+			</div>
+		</footer>
 
 
-  <!-- To Top -->
-  <div class="rounded-circle scroll-top-to" style="background:rgb(0,167,89);;">
-    <i class="ti-angle-up "></i>
-  </div>
-</div>
-	
-  
-  <!-- JAVASCRIPTS -->
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <script src="plugins/bootstrap/bootstrap.min.js"></script>
-  <script src="plugins/slick/slick.min.js"></script>
-  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
-  <script src="plugins/aos/aos.js"></script>
-  <!-- google map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
-  <script src="plugins/google-map/gmap.js"></script>
-  
-  <script src="js/script.js"></script>
+		<!-- To Top -->
+		<div class="rounded-circle scroll-top-to" style="background:rgb(0,167,89);;">
+			<i class="ti-angle-up "></i>
+		</div>
+	</div>
 
-  <script>
-	window.addEventListener('load', function() {
-  // Wait for 3 seconds
-  setTimeout(function() {
-    // Hide the loader
-    document.getElementById('loading').style.display = 'none';
 
-    // Show the actual content
-    document.getElementById('actual-page').style.display = 'block';
-  }, 3000); // 3000 milliseconds = 3 seconds
-});
+	<!-- JAVASCRIPTS -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<script src="plugins/bootstrap/bootstrap.min.js"></script>
+	<script src="plugins/slick/slick.min.js"></script>
+	<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+	<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+	<script src="plugins/aos/aos.js"></script>
+	<!-- google map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+	<script src="plugins/google-map/gmap.js"></script>
+	<!-- Bootstrap JS and Popper.js -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-  </script>
+	<script src="js/script.js"></script>
+	<script>
+		function toggleText() {
+			const text = document.getElementById('text');
+			const btn = document.getElementById('readMoreBtn');
+
+			// Check if text is currently collapsed or expanded
+			if (text.classList.contains('show-text')) {
+				text.classList.remove('show-text');
+				btn.innerHTML = 'Read More'; // Change button label to "Read More"
+			} else {
+				text.classList.add('show-text');
+				btn.innerHTML = 'Read Less'; // Change button label to "Read Less"
+			}
+		}
+
+	</script>
+
+	<script>
+		window.addEventListener('load', function () {
+			// Wait for 3 seconds
+			setTimeout(function () {
+				// Hide the loader
+				document.getElementById('loading').style.display = 'none';
+
+				// Show the actual content
+				document.getElementById('actual-page').style.display = 'block';
+			}, 3000); // 3000 milliseconds = 3 seconds
+		});
+
+	</script>
 </body>
 
 
