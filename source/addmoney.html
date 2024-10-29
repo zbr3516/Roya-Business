@@ -1,23 +1,260 @@
 <html lang="en">
 
 <head>
+	<style>
+		.loader-center {
+			background-color: white;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+		}
 
+		.loader-list {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -90px 0 0 -80px;
+		}
+
+
+		.loader {
+			position: absolute;
+			top: 80px;
+			left: 65px;
+			color: red;
+			border-radius: 50%;
+			transition: 1s all;
+		}
+
+		.loader-top {
+			position: absolute;
+			border: 5px solid transparent;
+			border-top-color: rgb(0, 167, 89);
+			border-radius: 50%;
+			-webkit-animation: loading linear infinite;
+			-moz-animation: loading linear infinite;
+			-o-animation: loading linear infinite;
+			animation: loading linear infinite;
+		}
+
+		.loader-bottom {
+			position: absolute;
+			border: 5px solid transparent;
+			border-bottom-color: rgb(253, 202, 1);
+			border-radius: 50%;
+			-webkit-animation: loading linear infinite;
+			-moz-animation: loading linear infinite;
+			-o-animation: loading linear infinite;
+			animation: loading linear infinite;
+		}
+
+		.loader-top.one {
+			top: 24px;
+			left: 15px;
+			width: 120px;
+			height: 120px;
+			animation-duration: 1s;
+		}
+
+		.loader-top.two {
+			top: 37px;
+			left: 30px;
+			width: 90px;
+			height: 90px;
+			animation-duration: 1.2s;
+		}
+
+		.loader-top.three {
+			top: 50px;
+			left: 40px;
+			width: 70px;
+			height: 70px;
+			animation-duration: 1.4s;
+		}
+
+		.loader-top.four {
+			top: 64px;
+			left: 50px;
+			width: 50px;
+			height: 50px;
+			animation-duration: 1.6s;
+		}
+
+		.loader-bottom.one {
+			top: 23px;
+			left: 15px;
+			width: 120px;
+			height: 120px;
+			animation-duration: 1s;
+		}
+
+		.loader-bottom.two {
+			top: 42px;
+			left: 30px;
+			width: 90px;
+			height: 90px;
+			animation-duration: 1.2s;
+		}
+
+		.loader-bottom.three {
+			top: 51px;
+			left: 40px;
+			width: 70px;
+			height: 70px;
+			animation-duration: 1.4s;
+		}
+
+		.loader-bottom.four {
+			top: 59px;
+			left: 50px;
+			width: 50px;
+			height: 50px;
+			animation-duration: 1.6s;
+		}
+
+		@-webkit-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-moz-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-ms-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@-ms-keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+
+		@keyframes loading {
+			from {
+				-webkit-transform: rotateZ(360deg);
+				-moz-transform: rotateZ(360deg);
+				-ms-transform: rotateZ(360deg);
+				transform: rotateZ(360deg);
+			}
+
+			to {
+				-webkit-transform: rotateZ(0);
+				-moz-transform: rotateZ(0);
+				-ms-transform: rotateZ(0);
+				transform: rotateZ(0);
+			}
+		}
+	</style>
+	<style>
+		/* Initially hide the extra text */
+		.hidden-text {
+			max-height: 100px;
+			/* Set a height to control the visible portion of the text */
+			overflow: hidden;
+			transition: max-height 0.5s ease;
+		}
+
+		/* When showing the full text */
+		.show-text {
+			max-height: none;
+			/* Allows the full text to be visible */
+		}
+	</style>
+
+	<!-- owl carousel -->
+	<style>
+		/* Icon color for all slides */
+		.testimonial-icon {
+			color: rgb(0, 167, 89);
+			/* Desired color for icons */
+		}
+
+		/* Additional styling */
+		.testimonial-slider .block {
+			padding: 20px;
+			background: #f8f8f8;
+			border-radius: 8px;
+			text-align: center;
+		}
+
+		.testimonial-slider h3 {
+			margin-top: 10px;
+			font-size: 1.5em;
+			color: #333;
+		}
+
+		.testimonial-slider p {
+			font-size: 1em;
+			color: #666;
+		}
+	</style>
 	<!-- Basic Page Needs
-	================================================== -->
+  ================================================== -->
 	<meta charset="utf-8">
 	<title>Roya business</title>
-	<!-- <title>Small Apps | Bootstrap App Landing Template</title>  -->
 
 	<!-- Mobile Specific Metas
-	================================================== -->
+  ================================================== -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Bootstrap App Landing Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 	<meta name="author" content="Themefisher">
 	<meta name="generator" content="Themefisher Small Apps Template v1.0">
 
+
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-16x16.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-16x16.png" />
 
 	<!-- PLUGINS CSS STYLE -->
 	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -26,22 +263,20 @@
 	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
 	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="plugins/aos/aos.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 	<!-- CUSTOM CSS -->
+	<link href="/theme/css/style.css" rel="stylesheet">
 	<script type="text/javascript">
 		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar'}, 'google_translate_element');
+			new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
 		}
 	</script>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-	<!-- <link href="css/style.css" rel="stylesheet"> -->
+	<script type="text/javascript"
+		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-	<link rel="stylesheet" href="/theme/css/style.css">
-
-	<script type="text/javascript" charset="UTF-8"
-		src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/common.js"></script>
-	<script type="text/javascript" charset="UTF-8"
-		src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/util.js"></script>
 </head>
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav" data-aos-easing="ease" data-aos-duration="400"
@@ -202,12 +437,17 @@
 	<div class="section banner-full">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 justify-content-xs-center">
+				<div class="col-lg-6 justify-content-xs-center">
 					<div class="image aos-init aos-animate" data-aos="flip-right">
-						<img class="img-fluid" src="images/feature/iphone-black.jpg" alt="Iphone-Black">
+						<img style="
+						height: 420px;
+						width: 520px;
+						
+						border-radius: 10px;
+					" class="img-fluid" src="images/add_money-1.png" alt="Iphone-Black">
 					</div>
 				</div>
-				<div class="col-lg-8 align-self-center">
+				<div class="col-lg-6 align-self-center">
 					<div class="block">
 						<div class="logo">
 							<!-- <a href="index.html"><img src="images/logo.png" alt="logo"></a> -->
@@ -228,7 +468,7 @@
 							<li class="list-inline-item">
 								<div class="numericList">
 									<div class="container">
-									  <div class="h2 numericList__title">Through Apple Pay</div>
+									  <div class="h2 numericList__title">Through Roya Business</div>
 								  
 									  <ol class="numericList__list">
 												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Click the “Add money” button</li>
