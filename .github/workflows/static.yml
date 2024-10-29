@@ -38,8 +38,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only the contents of the source folder
-          path: 'source/'
+          # Upload contents of both source and theme folders
+          path: |
+            source/
+            theme/css/
 
       - name: Deploy to GitHub Pages
         id: deployment
